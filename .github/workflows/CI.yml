@@ -22,3 +22,5 @@ jobs:
       run: dotnet build
     - name: Run
       run: dotnet run
+    - name: Show log
+      run: cat ScriptLog.log
