@@ -1,9 +1,10 @@
+using System.IO;
 ﻿using System.Diagnostics;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 
 DefaultTraceListener? dtl = (DefaultTraceListener?)Trace.Listeners["Default"];
 if (dtl != null)
-    dtl.LogFileName = Path.Combine(AppContext.BaseDirectory, "ScriptText.log");
+    dtl.LogFileName = Path.Combine(Directory.GetCurrentDirectory(), "ScriptText.log");
 
 string a = """
 using System;
